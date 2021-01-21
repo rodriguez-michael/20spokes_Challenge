@@ -17,7 +17,7 @@ const Button = ({ floor, index}) => {
 
   return (
     <div>
-      <button onClick={handleClick}>{floor}</button>
+      <button onClick={handleClick} style={{marginTop: '15px'}}>{floor}</button>
     </div>
   )
 }
