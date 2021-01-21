@@ -1,15 +1,11 @@
 import React from 'react'
-import { useRecoilState } from "recoil";
-import { createGlobalState } from "../globalstate/atom"
 
 const Floor = ({ floor, index }) => {
 
-  const [currentFloor, setCurrentFloor] = useRecoilState(createGlobalState);
-
   return (
-    <div style={{display: 'flex', flexDirection: 'column', marginTop: '100px', alignContent: 'flex-end' }}>
-      <div>
-        Floor {floor}
+    <div style={{display: 'flex', flexDirection: 'column', marginBottom: '10px', alignContent: 'flex-end' }}>
+      <div style={{backgroundColor: '#D8D8D8', borderStyle: 'solid', height: '100px', width: '100px'}}>
+        <span style={{textDecoration: 'underline'}}>Floor {floor}</span>
       </div>
     </div>
   )
