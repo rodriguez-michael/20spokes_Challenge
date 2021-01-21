@@ -24,7 +24,7 @@ const Elevator = () => {
 
   return (
     <div style={{display: 'flex', flexDirection: 'column'}}>
-      <button className='elevator' style={{backgroundColor: 'blue', color: 'white', marginTop: handleMargin()}}>Elevator - {currentFloor.floor}</button>
+      <button className='elevator' style={{backgroundColor: 'blue', color: 'white', transition: 'all 1s', marginTop: handleMargin()}}>Elevator - {currentFloor.floor}</button>
     </div>
   )
 }
