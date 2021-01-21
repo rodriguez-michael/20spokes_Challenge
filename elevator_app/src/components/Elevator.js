@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useRecoilState } from "recoil";
 import { createGlobalState } from "../globalstate/atom"
+
+
+function usePrevious(value) {
+  const ref = useRef();
+  
+  useEffect(() => {
+    ref.current = value;
+  }, [value]);
+  
+  return ref.current;
+}
 
 const Elevator = () => {
 
   const [currentFloor, setCurrentFloor] = useRecoilState(createGlobalState);
+  
+  let prevFloor = usePrevious(currentFloor) 
 
-  const handleMargin = () => {
+  const switchFloors = () => {
     if(currentFloor.floor === 1){
       return '580px'
     }else if(currentFloor.floor === 2){
@@ -22,9 +35,14 @@ const Elevator = () => {
     }
   }
 
+  const elevatorSpeed = () => {
+    let floorDifference = Math.abs(currentFloor.floor - prevFloor?.floor)
+    return `all ${floorDifference}s`
+  }
+
   return (
     <div style={{display: 'flex', flexDirection: 'column'}}>
-      <button className='elevator' style={{backgroundColor: 'blue', color: 'white', transition: 'all 1s', marginTop: handleMargin()}}>Elevator - {currentFloor.floor}</button>
+      <button className='elevator' style={{backgroundColor: 'blue', color: 'white', transitionTimingFunction: 'linear', transition: elevatorSpeed(), marginTop: switchFloors()}}>Elevator - {currentFloor.floor}</button>
     </div>
   )
 }
