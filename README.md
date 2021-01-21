@@ -1,5 +1,5 @@
 # 20spokes_Challenge
-20spokes Elevator Challenge
+20spokes Elevator Challenge - Michael Rodriguez
 
 <!-- PROJECT LOGO -->
 <br />
@@ -11,7 +11,7 @@
   <h3 align="center">Elevator App</h3>
 
   <p align="center">
-    An pretty cool elevator app.
+    A pretty cool elevator app.
 </p>
 
 ![](images/app.png)
