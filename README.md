@@ -32,6 +32,10 @@ To get a local copy up and running follow these simple steps.
    ```sh
    npm install
    ```
+3. NPM start
+   ```sh
+   npm start
+   ```
 
 <!-- CONTACT -->
 ## Contact
