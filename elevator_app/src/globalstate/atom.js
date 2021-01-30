@@ -6,3 +6,10 @@ export const createGlobalState = atom({
     floor: 1
   }
 })
+
+// export const createElevatorState = atom({
+//   key: "createElevatorState",
+//   default: {
+//     stopped: true
+//   }
+// })

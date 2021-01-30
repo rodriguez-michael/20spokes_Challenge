@@ -7,12 +7,12 @@ const Button = ({ floor, index}) => {
   const [currentFloor, setCurrentFloor] = useRecoilState(createGlobalState);
 
   const handleClick = () => {
-    setCurrentFloor((prevState) => {
-      return {
-        ...prevState,
-        floor: (prevState = floor)
-      }
-    })
+      setCurrentFloor((prevState) => {
+        return {
+          ...prevState,
+          floor: (prevState = floor)
+        }
+      })
   }
 
   return (

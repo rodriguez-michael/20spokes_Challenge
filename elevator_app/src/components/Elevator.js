@@ -33,18 +33,18 @@ const Elevator = () => {
 
 
   const switchFloors = () => {
-    if(currentFloor.floor === 1){
-      return '508px'
-    }else if(currentFloor.floor === 2){
-      return '390px'
-    }else if(currentFloor.floor === 3){
-      return '275px'
-    }else if(currentFloor.floor === 4){
-      return '160px'
-    }else if(currentFloor.floor === 5){
-      return '41px'
-    }else{
-      return '508px'
+      if(currentFloor.floor === 1){
+        return '508px'
+      }else if(currentFloor.floor === 2){
+        return '390px'
+      }else if(currentFloor.floor === 3){
+        return '275px'
+      }else if(currentFloor.floor === 4){
+        return '160px'
+      }else if(currentFloor.floor === 5){
+        return '41px'
+      }else{
+        return '508px'
     }
   }
 
